@@ -1,0 +1,93 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calculator {
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 500px;
+  height: 600px;
+  background-color: rgb(67, 66, 66);
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  gap: 3px;
+}
+
+.calculator > div {
+  flex: 1;
+}
+
+.display {
+  background-color: gray;
+  border: 4px solid black;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-size: 70px;
+  font-weight: bolder;
+  overflow: hidden;
+  padding-right: 10px;
+  white-space: nowrap;
+}
+
+.first,
+.second,
+.third,
+.fourth,
+.fifth {
+  display: flex;
+  gap: 3px;
+}
+
+.first > div,
+.second > div,
+.third > div,
+.fourth > div,
+.fifth > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  border: 2px solid black;
+  border-radius: 5px;
+  transition: background-color;
+}
+
+.first > div {
+  background-color: #1e90ff;
+}
+.first > div:last-of-type,
+.second > div:last-of-type,
+.third > div:last-of-type,
+.fourth > div:last-of-type,
+.fifth > div:last-of-type {
+  background-color: #ff8f1f;
+}
+.second > div,
+.third > div,
+.fourth > div,
+.fifth > div {
+  background-color: #217c7e;
+}
+.fifth > div:first-of-type {
+  flex: 2;
+}
+
+.pressed {
+  background-color: #d3d3d3 !important;
+}
