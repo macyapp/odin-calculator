@@ -19,6 +19,9 @@ function inputDigit(digit) {
 function inputDecimal(dot) {
   if (!currentValue.includes(dot)) {
     currentValue += dot;
+  } else {
+    if (currentValue[currentValue.length - 1] === dot)
+      currentValue = currentValue.substring(0, currentValue.length - 1);
   }
 }
 
